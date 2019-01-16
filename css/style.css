@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Navigation */
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-brand img {
+    height: 50px;
+    padding-left: 30px;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    float: right;
+    text-align: left
+}
+
+#nav-bar ul li a:hover {
+    color: #007bff!important;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-toggler {
+    border: none!important;
+}
+
+.nav-link {
+    color: #555!important;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Slider */
+
+#slider {
+    width: 100%;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial!important;
+}
+
+.carousel-caption h5 {
+    color: #fff;
+    font-size: 42px;
+}
+
+/* About */
+
+#about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #555;
+}
+
+#about .btn {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    padding-top: 20px;
+}
+
+.skills-bar p {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    border-radius: 16px;
+}
+
+.progress {
+    border-radius: 16px !important;
+    margin-bottom: 20px;
+}
+
+/* menu */
+
+#menu {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)),url("C:/Projects/Web Dev/YPAN/img/hh22.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #efefef !important;
+    background-attachment: fixed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#menu h1 {
+    text-align: center;
+    color: #efefef !important;
+    padding-bottom: 10px;
+}
+
+#menu h1::after {
+    content: '';
+    background: #efefef;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+}
+
+.menu {
+    margin-top: 40px;
+}
+
+.icon {
+    font-size: 40px;
+    margin: 20px auto;
+    padding-top: 10px;
+    height: 80px;
+    width: 80px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+#menu p {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.menu .col-md-3:hover{
+    background: #007bff;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.menu .col-md-3 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Team Members */
+
+#team {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #555;
+}
+
+h1 {
+    text-align: center;
+    color: #555 !important;
+    padding-bottom: 10px;
+}
+h1::after {
+    content: '';
+    background: #007bff;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+}
+
+.profile-pic {
+    margin-top: 25px;
+}
+
+.profile-pic .img-box {
+    opacity: 1;
+    display: block;
+    position: relative;
+}
+
+.profile-pic .img-box img {
+    filter: grayscale(1);
+}
+
+.profile-pic .img-box img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+.profile-pic h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #007bff !important;
+}
+
+.profile-pic h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#team .fa {
+    height: 25px;
+    width: 25px;
+    color: #007bff !important;
+    background: #fff;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.img-box ul {
+    padding: 15px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 30%;
+    left: 32%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.img-box ul li {
+    padding: 5px;
+    display: inline-block
+}
+
+.img-box:hover ul{
+    opacity: 1;
+}
+
+.img-box ul, .img-box ul li {
+    transition: 0.5s;
+}
+
+/* Promo */
+
+#promo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)),url("C:/Projects/Web Dev/YPAN/img/hh22.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #efefef;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 100px;
+    font-family: sans-serif;
+    font-size: 38px;
+}
+
+#promo p, #promo h3{
+    color: white;
+}
+
+.chosen-single { 
+    height: 60px !important; 
+    line-height: 60px !important;
+    background: rgba(0, 0, 0, 0.5)!important;
+    text-align: left;
+    border: none!important;
+    box-shadow: none!important;
+}
+
+.chosen-single:hover {
+    box-shadow: 0 0 10px rgba(67,128,233)!important;
+    transition: 0.5s!important;
+}
+
+.chosen-single span {
+    font-size: 16px;
+    padding-left: 25px;
+    font-weight: 100!important;
+    color: #999;
+}
+
+.chosen-single div b{
+    margin-top: 20px;
+}
+
+.active-result {
+    text-align: left!important;
+}
+
+/* Get in Touch */
+
+#contact {
+    background-color: #efefef;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #777;
+}
+
+.contact-form {
+    padding: 15px;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+::placeholder {
+    color: #999 !important;
+}
+
+.follow {
+    background: #fff;
+    padding: 10px;
+    margin: 15px;
+}
+
+.contact-info .fa {
+    margin: 10px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Footer */
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+}
+
+.fa-heart-o {
+    margin: 3px;
+    color: red;
+}
+
+/* BALANCE PAGE */
+
+/* Modal Entry */
+
+.open-button {
+    background-color: none;
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    position: fixed;
+    bottom: 23px;
+    right: 10px;
+    z-index: 9;
+}
+
+#entry label {
+    font-weight: bold;
+    color: #555;
+}
+
+.modal-content {
+    background-color: #ddd!important;
+}
+
+#base {
+    margin: -10px auto;
+    text-align: center;
+}
+
+#base2 {
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Table */
+
+#table {
+    background-color: #efefef;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.index-table {
+    background-color: #fff;
+    width: 100%;
+}
+
+.index-table p {
+    color: #555;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#table .dataTables_length label {
+    padding-left: 10px;
+}
+
+#table .dataTables_filter label {
+    padding-right: 10px;
+}
+
+.dataTables_filter input {
+    box-shadow: 0 0 2px rgba(67,128,233)!important;
+    border-radius: 2px!important;
+}
+
+.dataTables_filter input:hover {
+    box-shadow: 0 0 10px rgba(67,128,233)!important;
+    transition: 0.5s;
+}
+
+/* TABLES CONTAINER */
+
+.con {
+    margin: auto 50px;
+}
+
+
+/* CHANGE ADMIN INFO */
+
+/* Change Details */
+
+#change-details {
+    background-color: #ddd;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#change-details .form-control {
+    padding: 25px;
+}
+
+#change-details .form-group {
+    margin: 10px 0 30px 0;
+}
+
+#change-details label {
+    color: #555;
+    font-weight: bold;
+}
+
+/* ABOUT PAGE */
+
+#about-page {
+    background-color: #efefef;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#about-page .col-md-8 {
+    background-color: #fff
+}
+
+#about-page .col-md-4 {
+    background-color: #777;
+    color: #fff;
+}
+
+/* SAVINGS PAGE */
+
+/* Members Savings */
+
+#member-savings {
+    background-color: #ddd;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#member-savings .form-control {
+    padding: 30px;
+    border-radius: 5px!important;
+    font-weight: bold;
+}
+
+#member-savings ::placeholder {
+    font-weight: normal!important;
+}
+
+#member-savings .chosen-single { 
+    background: #fff!important;
+    margin-bottom: 12px;
+}
+
+#member-savings .chosen-single span {
+    color: #999;
+    font-weight: normal!important;
+}
+
+/* INSTALMENT PAGE */
+
+/* Instalment */
+
+#instalment-table {
+    background-color: #ddd;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#instalment-table .form-control {
+    padding: 30px;
+    border-radius: 5px!important;
+    font-weight: bold;
+}
+
+#instalment-table ::placeholder {
+    font-weight: normal!important;
+}
+
+#instalment-table .chosen-single { 
+    background: #fff!important;
+    margin-bottom: 12px;
+}
+
+#instalment-table .chosen-single span {
+    color: #999;
+    font-weight: normal!important;
+}
+
+
+/* LOAN BOND PAGE */
+
+/* Loan Bond */
+
+#loanbond {
+    background-color: #ddd;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#loanbond article {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    width: 21cm!important;
+    /* height: 29.7cm; */
+    padding: 30px 40px;
+    font-size: 16px!important;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 20px;
+}
+
+#loanbond .print-icon i {
+    margin-top: -35px;
+    font-size: 20px;
+}
+
+#loanbond h4 {
+    font-weight: bold;
+}
+
+#loanbond .print-icon {
+    font-size: 16px;
+}
+
+#loanbond .print-icon:hover {
+    color: #074d97;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#loanbond a {
+    text-decoration: none;
+}
+
+#loanbond .table td {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+
+#loanbond .table {
+    margin-bottom: 5px!important;
+}
+
+#loanbond p {
+    margin-bottom: 5px;
+}
+
+#loanbond .paragraph {
+    margin-top: 10px;
+}
+
+#loanbond .follow-paragraph {
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+#loanbond .declaration {
+    margin-top: 10px;
+}
+
+#loanbond .official {
+    background: black;
+    padding: 5px;
+    width: fit-content;
+    margin: 20px auto;
+    color: white;
+    font-size: 20px;
+}
+
+/* SAVINGS-TABLE */
+
+#savings-table {
+    background: #ddd;
+    padding-bottom: 40px;
+}
+
+#savings-table .container {
+    background: #fff;
+}
+
+#savings-table #savingsTable td, th {
+    border: 1px solid #ddd;
+}
+
+#savings-table label {
+    display: inline-flex;
+}
+
+#savings-table .dataTables_filter input {
+    margin-left: 10px!important;
+}
+
+#savings-table .col-md-6:first-child {
+    margin-right: -190px!important;
+}
+
+#savings-table .col-md-5 {
+    margin-right: -45px!important;
+}
+
+#savings-table .row-num {
+    font-weight: bold;
+    color: #555;
+}
+
+#savings-table .values {
+    font-weight: bold;
+}
+
+
+/* INSTALMENT TABLE */
+
+#each-member-instalment {
+    background: #ddd;
+    padding-bottom: 40px;
+}
+
+#each-member-instalment .container {
+    background: #fff;
+}
+
+#each-member-instalment #instalmentTable td, th {
+    border: 1px solid #ddd;
+}
+
+#each-member-instalment label {
+    display: inline-flex;
+}
+
+#each-member-instalment .dataTables_filter input {
+    margin-left: 10px!important;
+}
+
+#each-member-instalment .col-md-6:first-child {
+    margin-right: -230px!important;
+}
+
+#each-member-instalment .col-md-5 {
+    margin-right: -85px!important;
+}
+
+#each-member-instalment .row-num {
+    font-weight: bold;
+    color: #555;
+}
+
+#each-member-instalment .values {
+    font-weight: bold;
+}
