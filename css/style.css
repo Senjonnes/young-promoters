@@ -525,11 +525,9 @@ h1::after {
     margin-bottom: 0.5cm;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
     width: 21cm!important;
-    /* height: 29.7cm; */
     padding: 30px 40px;
     font-size: 16px!important;
     font-family: 'Times New Roman', Times, serif;
-    line-height: 20px;
 }
 
 #loanbond .print-icon i {
@@ -575,6 +573,10 @@ h1::after {
 #loanbond .follow-paragraph {
     padding-left: 40px;
     padding-right: 0;
+}
+
+#loanbond .signatory {
+    margin-top: 20px;
 }
 
 #loanbond .declaration {
