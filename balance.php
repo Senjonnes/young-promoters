@@ -1,3 +1,12 @@
+<?php
+$con = new mysqli("localhost","root", "", "ypan");
+
+$sqlquery = "SELECT * FROM bankbalance";
+$result = mysqli_query($con, $sqlquery);
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +21,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -24,7 +32,7 @@
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 </head>
-<body>
+<body onload="addCell()">
     <!--NavigationBar-->
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -38,7 +46,7 @@
                   <a class="nav-link" href="home.html">HOME</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">ABOUT</a>
+                    <a class="nav-link" href="about.html">ABOUT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">LOGOUT</a>
@@ -55,7 +63,7 @@
                 <div class="col-md-6 text-center" style="margin:auto;">
                     <form>
                         <select class="chosen-select" style="width: 100%">
-                            <option disabled selected>Member's Name</option>
+                                <option disabled selected>Member's Name</option>
                             <option>India</option>
                             <option>Nigeria</option>
                             <option>Qatar</option>
@@ -173,174 +181,33 @@
                             <th>Bank Interest</th>
                             <th>Sundry Income</th>
                             <th>Fixed Deposit</th>
-                            <th>Expendicture</th>
+                            <th>Expendictures</th>
                             <th>Loan</th>
                             <th>Balance</th>
                             <th>Comments</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>01/01/2019</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>1,000,000</td>
-                            <td>Goodies</td>
-                        </tr>
-                        <tr>
-                            <td>02/01/2019</td>
-                            <td>2,000,000</td>
-                            <td>2,000,000</td>
-                            <td>2,000,000</td>
-                            <td>2,000,000</td>
-                            <td>2,000,000</td>
-                            <td>2,000,000</td>
-                            <td>2,000,000</td>
-                            <td>2,000,000</td>
-                            <td>2,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
-                        <tr>
-                            <td>03/01/2019</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>3,000,000</td>
-                            <td>Good</td>
-                        </tr>
+                    <tbody id="tt">
+                        <?php while($row=mysqli_fetch_assoc($result)) :?>
+                            <tr>
+                                <td><?php echo date_format(date_create($row['dates']), 'd/m/Y'); ?></td>
+                                <td><?php echo $row['membersavings']; ?></td>
+                                <td><?php echo $row['entrancefees']; ?></td>
+                                <td><?php echo $row['instalment']; ?></td>
+                                <td><?php echo $row['bankinterest']; ?></td>
+                                <td><?php echo $row['sundryincome']; ?></td>
+                                <td><?php echo $row['fixeddeposit']; ?></td>
+                                <td><?php echo $row['expendictures']; ?></td>
+                                <td><?php echo $row['loan']; ?></td>
+                                <td><?php echo $row['balance']; ?></td>
+                                <td><?php echo $row['comment']; ?></td>
+                            </tr>
+                        <?php endwhile; ?>
                     </tbody>
                 </table>
             </div>
         </div>
-
+        
     </section>
     <!-- Footer -->
     <section id="footer">
@@ -349,11 +216,14 @@
         </div>
     </section>
     <!-- Footer End -->
+    <script src="js/main.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
         $(document).ready( function () {
-            $('#balanceTable').DataTable();
+            $('#balanceTable').DataTable({
+                "order": []
+            });
         });
         $(document).ready(function() {
             $('.chosen-select').select2({
