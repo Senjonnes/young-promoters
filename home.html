@@ -318,6 +318,41 @@
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
         $(".chosen-select").chosen({width: "100%"});
+        if (chosenSelects) {
+            chosenSelects.chosen();
+
+            // Check for 'chosen' elements on mobile devices
+            // -----
+            // Given that ChosenJS has expressly been disabled from running
+            // on mobile browsers, the styles have to be applied manually.
+            // Source: https://github.com/harvesthq/chosen/pull/1388
+            // -----
+            // The code below gathers all 'chosen' selectors and adds
+            // 'chosen-mobile' as a className. This className is then
+            // used to apply the necessary styles for mobile browsers.
+            // Within each select, if an 'option' has an empty value,
+            // then that value will be given 'selected' and 'disabled'
+            // attributes to act as a placeholder, adopting the text
+            // in the 'data-placeholder' as the text to be displayed.
+            if ( /iP(od|hone)/i.test(window.navigator.userAgent)
+                || (/Android/i.test(window.navigator.userAgent) && /Mobile/i.test(window.navigator.userAgent)) ) {
+                chosenSelects.each(function () {
+                    $select = $(this);
+                    $select.addClass('chosen-mobile');
+
+                    $select.find('option').each(function () {
+                        $option = $(this);
+
+                        if ( $option.val() == '' ) {
+                            $option
+                                .attr('selected', 'selected')
+                                .attr('disabled', 'disabled')
+                                .text( $select.data('placeholder') );
+                            }
+                        });
+                    });
+                }
+            }
     </script>
 </body>
 </html>
