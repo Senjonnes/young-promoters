@@ -17,8 +17,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 </head>
 <body>
     <!--NavigationBar-->
@@ -48,9 +48,9 @@
         <div class="container">
             <p>Get Member's Loan Bond</p>
             <div class="row">
-                <div class="col-md-6 offset-md-3">
+                <div class="col-md-6 text-center" style="margin:auto;">
                     <form>
-                        <select class="chosen-select">
+                        <select class="chosen-select" style="width: 100%">
                             <option disabled selected>Member's Name</option>
                             <option>India</option>
                             <option>Nigeria</option>
@@ -68,7 +68,7 @@
                     </form>
                     <a href="loanbond.html" class="btn btn-primary">Get Loan Bond</a>
                 </div>
-            </div>  
+            </div>
         </div>
     </section>
     <!-- Change Admin Info -->
@@ -122,9 +122,11 @@
     <script src="js/smooth-scroll.js"></script>
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
-    </script>
-    <script type="text/javascript">
-        $(".chosen-select").chosen({width: "100%"});
+        $(document).ready(function() {
+            $('.chosen-select').select2({
+                width: 'resolve' // need to override the changed default
+            });
+        });
     </script>
 </body>
 </html>
