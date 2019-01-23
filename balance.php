@@ -20,7 +20,10 @@ $result = mysqli_query($con, $sqlquery);
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <!-- Font awesome starts -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <!-- Font awesome ends -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -31,6 +34,7 @@ $result = mysqli_query($con, $sqlquery);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/axios.js"></script>
 </head>
 <body onload="addCell()">
     <!--NavigationBar-->
@@ -63,7 +67,7 @@ $result = mysqli_query($con, $sqlquery);
                 <div class="col-md-6 text-center" style="margin:auto;">
                     <form>
                         <select class="chosen-select" style="width: 100%">
-                                <option disabled selected>Member's Name</option>
+                            <option disabled selected>Member's Name</option>
                             <option>India</option>
                             <option>Nigeria</option>
                             <option>Qatar</option>
@@ -218,6 +222,7 @@ $result = mysqli_query($con, $sqlquery);
     <!-- Footer End -->
     <script src="js/main.js"></script>
     <script src="js/smooth-scroll.js"></script>
+    <script src="js/bootstable.js"></script>
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
         $(document).ready( function () {
@@ -229,6 +234,15 @@ $result = mysqli_query($con, $sqlquery);
             $('.chosen-select').select2({
                 width: 'resolve' // need to override the changed default
             });
+        });
+        $('#balanceTable').SetEditable({
+            onEdit: function(e) {
+                axios.post('updatebalance.php',{
+                    id: e[0].rowIndex,
+                    
+                })
+                console.log(e[0].rowIndex);
+            },
         });
     </script>
 </body>
