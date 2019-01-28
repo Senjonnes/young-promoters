@@ -68,18 +68,77 @@ $result = mysqli_query($con, $sqlquery);
                     <form>
                         <select class="chosen-select" style="width: 100%">
                             <option disabled selected>Member's Name</option>
-                            <option>India</option>
-                            <option>Nigeria</option>
-                            <option>Qatar</option>
-                            <option>Canada</option>
-                            <option>Australia</option>
-                            <option>USA</option>
-                            <option>America</option>
-                            <option>London</option>
-                            <option>China</option>
-                            <option>Japan</option>
-                            <option>Newzeland</option>
-                            <option>Norway</option>
+                            <option>S. A. Emmanuel</option>
+                            <option>Adelani Taofeek</option>
+                            <option>Odeyemi Kehinde</option>
+                            <option>Akinjare Jacob</option>
+                            <option>Ola Kehinde</option>
+                            <option>Samuel Olatunji</option>
+                            <option>Elijah Popoola</option>
+                            <option>Adebisi Sunday</option>
+                            <option>David Ajadi</option>
+                            <option>Adegbite Adebayo</option>
+                            <option>Adewale Isiaka</option>
+                            <option>Isaiah Adeagbo</option>
+                            <option>Musiliu Olunlade</option>
+                            <option>Olawale Sunday</option>
+                            <option>Adisa Emmanuel</option>
+                            <option>Adesiyan Kayode</option>
+                            <option>Joshua Ajadi</option>
+                            <option>Olayinka Olarewaju</option>
+                            <option>Hammed Akanji</option>
+                            <option>Adeleke Adebisi</option>
+                            <option>Adekola Adeosun</option>
+                            <option>Sunday Oyemomilara</option>
+                            <option>Gberelaye Mudasiru</option>
+                            <option>Akanmu Gafar</option>
+                            <option>Matthew Ajadi</option>
+                            <option>Owolabi Lere</option>
+                            <option>Adefaye Felix</option>
+                            <option>Dayo Ajayi</option>
+                            <option>Babatunde Ayodele</option>
+                            <option>Akintola Jacob</option>
+                            <option>Nathaniel Oluwadare</option>
+                            <option>Ayinde Yusuf</option>
+                            <option>David Akinyemi</option>
+                            <option>Raufu Lukman</option>
+                            <option>Lukman Oyewole</option>
+                            <option>Basiru Siyanbola</option>
+                            <option>Rafiu Adesiyan</option>
+                            <option>Rafiu Adebanjo</option>
+                            <option>Oluyemi Fasoyin</option>
+                            <option>Akinsola Saheed</option>
+                            <option>Adekanmi Kazeem</option>
+                            <option>Oladokun Banjo</option>
+                            <option>Adebayo Waheed</option>
+                            <option>Odeyemi Solomon</option>
+                            <option>Dada Jide</option>
+                            <option>Ayoola Oyewole</option>
+                            <option>Alabi Sunday</option>
+                            <option>Mufutau Ajadi</option>
+                            <option>Odewale Azeez</option>
+                            <option>Olatunji Kabiru</option>
+                            <option>Timothy Olarewaju</option>
+                            <option>Jimoh Lukman</option>
+                            <option>Asimiyu Afolabi</option>
+                            <option>Oluwaponile Oladepo</option>
+                            <option>Ajayi Moses</option>
+                            <option>Odewole Meshack</option>
+                            <option>Rauf Kehinde</option>
+                            <option>Ola Busuyi</option>
+                            <option>Agboola Joel</option>
+                            <option>Odetunde Abraham</option>
+                            <option>Adeyemi Oluwaseun</option>
+                            <option>Hammed Ismail</option>
+                            <option>Olarewaju Babalola</option>
+                            <option>Odumuyiwa Kunle</option>
+                            <option>Aworinde Wasiu</option>
+                            <option>Adeyemo Tajudeen</option>
+                            <option>Awodele Kolajo</option>
+                            <option>Azeez Ajao</option>
+                            <option>Afolabi Elijah</option>
+                            <option>Odewale Azeez</option>
+                            <option>Odewale Azeez</option>
                         </select>
                     </form>
                     <a href="loanbond.html" class="btn btn-primary">Get Loan Bond</a>
@@ -179,13 +238,12 @@ $result = mysqli_query($con, $sqlquery);
                     <thead>
                         <tr class="table-info">
                             <th>Dates</th>
-                            <th>Member's Savings</th>
+                            <th>Members Savings</th>
                             <th>Entrance Fees</th>
-                            <th>Installment</th>
-                            <th>Bank Interest</th>
-                            <th>Sundry Income</th>
-                            <th>Fixed Deposit</th>
-                            <th>Expendictures</th>
+                            <th>Instalment</th>
+                            <th>Fines</th>
+                            <th>Shop</th>
+                            <th>Exp.</th>
                             <th>Loan</th>
                             <th>Balance</th>
                             <th>Comments</th>
@@ -200,7 +258,6 @@ $result = mysqli_query($con, $sqlquery);
                                 <td><?php echo $row['instalment']; ?></td>
                                 <td><?php echo $row['bankinterest']; ?></td>
                                 <td><?php echo $row['sundryincome']; ?></td>
-                                <td><?php echo $row['fixeddeposit']; ?></td>
                                 <td><?php echo $row['expendictures']; ?></td>
                                 <td><?php echo $row['loan']; ?></td>
                                 <td><?php echo $row['balance']; ?></td>

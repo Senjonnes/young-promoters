@@ -182,11 +182,19 @@ h1::after {
 
 .profile-pic .img-box img {
     filter: grayscale(1);
+    border-radius: 50%;
 }
 
 .profile-pic .img-box img:hover {
     filter: grayscale(0);
     cursor: pointer;
+    border-radius: 0%;
+    transition: 0.5s;
+}
+
+.profile-pic .img-box .img-fluid {
+    width: 70%;
+    height: 70%;
 }
 
 .profile-pic h2 {
@@ -196,10 +204,20 @@ h1::after {
     color: #007bff !important;
 }
 
+.profile-pic .others {
+    color: #007bff !important;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.profile-pic p {
+    font-weight: bold;
+}
+
 .profile-pic h3 {
     font-size: 15px;
     font-weight: bold;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 #team .fa {
@@ -401,7 +419,7 @@ h1::after {
 /* TABLES CONTAINER */
 
 .con {
-    margin: auto 20px;
+    margin: auto 50px;
 }
 
 
