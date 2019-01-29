@@ -5,7 +5,7 @@ login.onclick = function () {
     var password = document.getElementById("password").value;
     if (username == "oluwaseun" && password == "oluwaseun") {
         alert("Login succesful");
-        window.location = "home.html";
+        window.location = "home.php";
     } else {
         alert("Incorrect username or password");
     }
