@@ -56,7 +56,7 @@ $names = mysqli_query($con, $membersname);
                     <a class="nav-link" href="about.php">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">LOGOUT</a>
+                    <a class="nav-link" href="login.php">LOGOUT</a>
                 </li>
               </ul>
             </div>
@@ -76,7 +76,7 @@ $names = mysqli_query($con, $membersname);
                             <?php endwhile; ?>
                         </select>
                     </form>
-                    <a href="loanbond.html" class="btn btn-primary">Get Loan Bond</a>
+                    <a href="loanbond.php" class="btn btn-primary">Get Loan Bond</a>
                 </div>
             </div>
         </div>

@@ -1,3 +1,12 @@
+<?php
+$con = new mysqli("localhost","root", "", "ypan");
+
+$membersname = "SELECT * FROM members";
+$names = mysqli_query($con, $membersname);
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,13 +41,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="home.html">HOME</a>
+                    <a class="nav-link" href="home.php ">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">ABOUT</a>
+                    <a class="nav-link" href="about.php">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">LOGOUT</a>
+                    <a class="nav-link" href="login.php">LOGOUT</a>
                 </li>
                 </ul>
             </div>
@@ -53,81 +62,12 @@
                     <form>
                         <select class="chosen-select" style="width: 100%">
                             <option disabled selected>Member's Name</option>
-                            <option>S. A. Emmanuel</option>
-                            <option>Adelani Taofeek</option>
-                            <option>Odeyemi Kehinde</option>
-                            <option>Akinjare Jacob</option>
-                            <option>Ola Kehinde</option>
-                            <option>Samuel Olatunji</option>
-                            <option>Elijah Popoola</option>
-                            <option>Adebisi Sunday</option>
-                            <option>David Ajadi</option>
-                            <option>Adegbite Adebayo</option>
-                            <option>Adewale Isiaka</option>
-                            <option>Isaiah Adeagbo</option>
-                            <option>Musiliu Olunlade</option>
-                            <option>Olawale Sunday</option>
-                            <option>Adisa Emmanuel</option>
-                            <option>Adesiyan Kayode</option>
-                            <option>Joshua Ajadi</option>
-                            <option>Olayinka Olarewaju</option>
-                            <option>Hammed Akanji</option>
-                            <option>Adeleke Adebisi</option>
-                            <option>Adekola Adeosun</option>
-                            <option>Sunday Oyemomilara</option>
-                            <option>Gberelaye Mudasiru</option>
-                            <option>Akanmu Gafar</option>
-                            <option>Matthew Ajadi</option>
-                            <option>Owolabi Lere</option>
-                            <option>Adefaye Felix</option>
-                            <option>Dayo Ajayi</option>
-                            <option>Babatunde Ayodele</option>
-                            <option>Akintola Jacob</option>
-                            <option>Nathaniel Oluwadare</option>
-                            <option>Ayinde Yusuf</option>
-                            <option>David Akinyemi</option>
-                            <option>Raufu Lukman</option>
-                            <option>Lukman Oyewole</option>
-                            <option>Basiru Siyanbola</option>
-                            <option>Rafiu Adesiyan</option>
-                            <option>Rafiu Adebanjo</option>
-                            <option>Oluyemi Fasoyin</option>
-                            <option>Akinsola Saheed</option>
-                            <option>Adekanmi Kazeem</option>
-                            <option>Oladokun Banjo</option>
-                            <option>Adebayo Waheed</option>
-                            <option>Odeyemi Solomon</option>
-                            <option>Dada Jide</option>
-                            <option>Ayoola Oyewole</option>
-                            <option>Oluwole Oyemomilara</option>
-                            <option>Alabi Sunday</option>
-                            <option>Lukman Babajide</option>
-                            <option>Mufutau Ajadi</option>
-                            <option>Odewale Azeez</option>
-                            <option>Olatunji Kabiru</option>
-                            <option>Timothy Olarewaju</option>
-                            <option>Jimoh Lukman</option>
-                            <option>Asimiyu Afolabi</option>
-                            <option>Oluwaponile Oladepo</option>
-                            <option>Ajayi Moses</option>
-                            <option>Adewole Meshack</option>
-                            <option>Rauf Kehinde</option>
-                            <option>Ola Busuyi</option>
-                            <option>Agboola Joel</option>
-                            <option>Odetunde Abraham</option>
-                            <option>Adeyemi Oluwaseun</option>
-                            <option>Hammed Ismail</option>
-                            <option>Olarewaju Babalola</option>
-                            <option>Odumuyiwa Kunle</option>
-                            <option>Aworinde Wasiu</option>
-                            <option>Adeyemo Tajudeen</option>
-                            <option>Awodele Kolajo</option>
-                            <option>Waheed Rasaq</option>
-                            <option>Azeez Ajao</option>
-                            <option>Afolabi Elijah</option>
+                            <?php while($row=mysqli_fetch_assoc($names)) :?>
+                                <option><?php echo $row['name']; ?></option>
+                            <?php endwhile; ?>
                         </select>
                     </form>
-                    <a href="loanbond.html" class="btn btn-primary">Get Loan Bond</a>
+                    <a href="loanbond.php" class="btn btn-primary">Get Loan Bond</a>
                 </div>
             </div>
         </div>

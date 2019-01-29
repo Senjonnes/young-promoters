@@ -159,7 +159,7 @@ $names = mysqli_query($con, $membersname);
                             for working with</p></a>
                 </div>
                 <div class="col-md-3 text-center">
-                    <a href="savings.html"><div class="icon">
+                    <a href="savings.php"><div class="icon">
                             <i class="fa fa-credit-card-alt"></i>
                     </div>
                     <h3>Members Savings Account</h3>
@@ -167,7 +167,7 @@ $names = mysqli_query($con, $membersname);
                         for working with</p></a>
                 </div>
                 <div class="col-md-3 text-center">
-                    <a href="installment.html"><div class="icon">
+                    <a href="installment.php"><div class="icon">
                         <i class="fa fa-line-chart"></i>
                     </div>
                     <h3>Instalment</h3>
@@ -311,7 +311,7 @@ $names = mysqli_query($con, $membersname);
                             <?php endwhile; ?>
                         </select>
                     </form>
-                    <a href="loanbond.html" class="btn btn-primary">Get Loan Bond</a>
+                    <a href="loanbond.php" class="btn btn-primary">Get Loan Bond</a>
                 </div>
             </div>
         </div>

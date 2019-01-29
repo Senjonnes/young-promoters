@@ -40,7 +40,7 @@
                     <input id="login" type="button" name="submit" class="btn btn-primary btn-block" value="LOGIN">
                     <div class="click">
                         <label for="button">Back to </label>
-                        <a id="link" href="index.html">Login</a>
+                        <a id="link" href="login.php">Login</a>
                         <label for="button"> page</label>
                     </div>
                 </form>

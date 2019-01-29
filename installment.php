@@ -51,7 +51,7 @@ $names = mysqli_query($con, $membersname);
                     <a class="nav-link" href="about.php">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">LOGOUT</a>
+                    <a class="nav-link" href="login.php">LOGOUT</a>
                 </li>
                 </ul>
             </div>
@@ -66,21 +66,12 @@ $names = mysqli_query($con, $membersname);
                     <form>
                         <select class="chosen-select" style="width: 100%">
                             <option disabled selected>Member's Name</option>
-                            <option>India</option>
-                            <option>Nigeria</option>
-                            <option>Qatar</option>
-                            <option>Canada</option>
-                            <option>Australia</option>
-                            <option>USA</option>
-                            <option>America</option>
-                            <option>London</option>
-                            <option>China</option>
-                            <option>Japan</option>
-                            <option>Newzeland</option>
-                            <option>Norway</option>
+                            <?php while($row=mysqli_fetch_assoc($names)) :?>
+                                <option><?php echo $row['name']; ?></option>
+                            <?php endwhile; ?>
                         </select>
                     </form>
-                    <a href="loanbond.html" class="btn btn-primary">Get Loan Bond</a>
+                    <a href="loanbond.php" class="btn btn-primary">Get Loan Bond</a>
                 </div>
             </div>
         </div>
