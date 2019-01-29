@@ -40,13 +40,13 @@ $names = mysqli_query($con, $membersname);
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="home.html">HOME</a>
+                    <a class="nav-link" href="home.php">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">ABOUT</a>
+                    <a class="nav-link" href="about.php">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">LOGOUT</a>
+                    <a class="nav-link" href="login.php">LOGOUT</a>
                 </li>
                 </ul>
             </div>
