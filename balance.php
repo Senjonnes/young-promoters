@@ -114,7 +114,9 @@ $result = mysqli_query($con, $sqlquery);
                             <option>Odeyemi Solomon</option>
                             <option>Dada Jide</option>
                             <option>Ayoola Oyewole</option>
+                            <option>Oluwole Oyemomilara</option>
                             <option>Alabi Sunday</option>
+                            <option>Lukman Babajide</option>
                             <option>Mufutau Ajadi</option>
                             <option>Odewale Azeez</option>
                             <option>Olatunji Kabiru</option>
@@ -123,7 +125,7 @@ $result = mysqli_query($con, $sqlquery);
                             <option>Asimiyu Afolabi</option>
                             <option>Oluwaponile Oladepo</option>
                             <option>Ajayi Moses</option>
-                            <option>Odewole Meshack</option>
+                            <option>Adewole Meshack</option>
                             <option>Rauf Kehinde</option>
                             <option>Ola Busuyi</option>
                             <option>Agboola Joel</option>
@@ -135,10 +137,9 @@ $result = mysqli_query($con, $sqlquery);
                             <option>Aworinde Wasiu</option>
                             <option>Adeyemo Tajudeen</option>
                             <option>Awodele Kolajo</option>
+                            <option>Waheed Rasaq</option>
                             <option>Azeez Ajao</option>
                             <option>Afolabi Elijah</option>
-                            <option>Odewale Azeez</option>
-                            <option>Odewale Azeez</option>
                         </select>
                     </form>
                     <a href="loanbond.html" class="btn btn-primary">Get Loan Bond</a>
