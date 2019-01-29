@@ -58,10 +58,10 @@ $names = mysqli_query($con, $membersname);
                     <a class="nav-link" href="#contact">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="change-admin-info.html">CHANGE ADMIN</a>
+                    <a class="nav-link" href="change-admin-info.php">CHANGE ADMIN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">LOGOUT</a>
+                    <a class="nav-link" href="login.php">LOGOUT</a>
                 </li>
               </ul>
             </div>

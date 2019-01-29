@@ -39,7 +39,7 @@
                     </div>
                     <div class="click">
                         <label for="button">Click</label>
-                        <a href="change-password.html">here</a>
+                        <a href="change-password.php">here</a>
                         <label for="button">to reset your password</label>
                     </div>
                 </form>
