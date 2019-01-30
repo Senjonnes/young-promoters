@@ -24,8 +24,8 @@ $names = mysqli_query($con, $membersname);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <!-- Font awesome starts -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Font awesome ends -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -113,42 +113,38 @@ $names = mysqli_query($con, $membersname);
                         <div class="col-md-4">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="installment">Installment</label>
-                                    <input type="number" name="installment" class="form-control" placeholder="Installment">
+                                    <label for="installment">Instalment</label>
+                                    <input type="number" name="instalment" class="form-control" placeholder="Installment">
                                 </div>
                                 <div class="form-group">
-                                    <label for="interest">Bank Interest</label>
-                                    <input type="number" name="interest" class="form-control" placeholder="Bank Interest">
+                                    <label for="interest">Fines</label>
+                                    <input type="number" name="interest" class="form-control" placeholder="Fines">
                                 </div>
                                 <div class="form-group">
-                                    <label for="sundry">Sundry Income</label>
-                                    <input type="number" name="sundry" class="form-control" placeholder="Sundry Income">
+                                    <label for="sundry">Shop</label>
+                                    <input type="number" name="sundry" class="form-control" placeholder="Shop">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="deposit">Fixed Deposit</label>
-                                    <input type="number" name="deposit" class="form-control" placeholder="Fixed Deposit">
+                                    <label for="deposit">Expenditure</label>
+                                    <input type="number" name="deposit" class="form-control" placeholder="Expenditure">
                                 </div>
                                 <div class="form-group">
-                                    <label for="expendicture">Expendicture</label>
-                                    <input type="number" name="expendicture" class="form-control" placeholder="Expendicture">
+                                    <label for="expendicture">Loan</label>
+                                    <input type="number" name="expendicture" class="form-control" placeholder="Loan">
                                 </div>
                                 <div class="form-group">
-                                    <label for="loan">Loan</label>
-                                    <input type="number" name="loan" class="form-control" placeholder="Loan">
+                                    <label for="loan">Balance</label>
+                                    <input type="number" name="loan" class="form-control" placeholder="Balance">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
-                            <div class="form-group" id="base">
-                                <label for="balance">Balance</label>
-                                <input type="number" name="balance" class="form-control" placeholder="Balance">
-                            </div>
                             <div class="form-group" id="base2">
                                 <label for="comment">Comment</label>
                                 <input type="text" name="comment" class="form-control" placeholder="Comment">

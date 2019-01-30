@@ -36,7 +36,7 @@ $names = mysqli_query($con, $membersname);
     <!--NavigationBar-->
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#top"><img src="img/logo.png"></a>
+            <a class="navbar-brand" href="#top"><img src="img/company-logo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -225,7 +225,7 @@ $names = mysqli_query($con, $membersname);
                 <div class="col-md-3 profile-pic text-center">
                     <div class="img-box">
                         <img src="img/n.jpg" class="img-fluid">
-                        <ul>
+                        <ul class="subordinates">
                             <a href="#"><li><i class="fa fa-facebook"></i></li></a>
                             <a href="#"><li><i class="fa fa-twitter"></i></li></a>
                             <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
@@ -239,7 +239,7 @@ $names = mysqli_query($con, $membersname);
                 <div class="col-md-3 profile-pic text-center">
                     <div class="img-box">
                         <img src="img/n.jpg" class="img-fluid">
-                        <ul>
+                        <ul class="subordinates">
                             <a href="#"><li><i class="fa fa-facebook"></i></li></a>
                             <a href="#"><li><i class="fa fa-twitter"></i></li></a>
                             <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
@@ -253,7 +253,7 @@ $names = mysqli_query($con, $membersname);
                 <div class="col-md-3 profile-pic text-center">
                     <div class="img-box">
                         <img src="img/n.jpg" class="img-fluid">
-                        <ul>
+                        <ul class="subordinates">
                             <a href="#"><li><i class="fa fa-facebook"></i></li></a>
                             <a href="#"><li><i class="fa fa-twitter"></i></li></a>
                             <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
@@ -269,7 +269,7 @@ $names = mysqli_query($con, $membersname);
                 <div class="col-md-3 profile-pic text-center">
                     <div class="img-box">
                         <img src="img/n.jpg" class="img-fluid">
-                        <ul>
+                        <ul class="subordinates">
                             <a href="#"><li><i class="fa fa-facebook"></i></li></a>
                             <a href="#"><li><i class="fa fa-twitter"></i></li></a>
                             <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
@@ -283,7 +283,7 @@ $names = mysqli_query($con, $membersname);
                 <div class="col-md-3 profile-pic text-center">
                     <div class="img-box">
                         <img src="img/n.jpg" class="img-fluid">
-                        <ul>
+                        <ul class="subordinates">
                             <a href="#"><li><i class="fa fa-facebook"></i></li></a>
                             <a href="#"><li><i class="fa fa-twitter"></i></li></a>
                             <a href="#"><li><i class="fa fa-linkedin"></i></li></a>

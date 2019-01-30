@@ -19,9 +19,10 @@ $names = mysqli_query($con, $membersname);
     <meta name="keywords" content="YPAN, coorperative, contribution, loan and payment">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <!-- Font awesome starts -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Font awesome ends -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -116,7 +117,7 @@ $names = mysqli_query($con, $membersname);
                         <div class="col-md-4">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="withdraw">Withdraw</label>
+                                    <label for="withdraw">Withdrawal</label>
                                     <input type="number" name="withdraw" class="form-control" placeholder="Withdraw">
                                 </div>
                                 <div class="form-group">
@@ -132,10 +133,6 @@ $names = mysqli_query($con, $membersname);
                                 <label for="balance">Balance</label>
                                 <input type="number" name="balance" class="form-control" placeholder="Balance">
                             </div>
-                            <div class="form-group" id="base2">
-                                <label for="comment">Comment</label>
-                                <input type="text" name="comment" class="form-control" placeholder="Comment">
-                            </div>
                         </div>
                     </div>
                     
@@ -149,12 +146,12 @@ $names = mysqli_query($con, $membersname);
     <!-- Members Savings -->
     <section id="member-savings">
         <div class="container">
-            <h1>Members Savings Account</h1>
+            <h1>Members' Savings Account</h1>
             <div class="row">
                 <div class="col-md-6 text-center" style="margin:auto;">
                     <form>
                         <select class="chosen-select" style="width: 100%">
-                            <option disabled selected>Member's Name</option>
+                        <option disabled selected>Member's Name</option>
                             <?php while($row=mysqli_fetch_assoc($names)) :?>
                                 <option><?php echo $row['name']; ?></option>
                             <?php endwhile; ?>
@@ -185,10 +182,9 @@ $names = mysqli_query($con, $membersname);
                         <tr class="table-info">
                             <th>Dates</th>
                             <th>Particulars</th>
-                            <th>Withdraw</th>
+                            <th>Withdrawal</th>
                             <th>Deposit</th>
                             <th>Balance</th>
-                            <th>Comments</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -198,7 +194,6 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
-                            <td>Goodies</td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -206,7 +201,6 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
-                            <td>Goodies</td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -214,7 +208,6 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
-                            <td>Goodies</td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -222,7 +215,6 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
-                            <td>Goodies</td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -230,7 +222,6 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
-                            <td>Goodies</td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -238,7 +229,6 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
-                            <td>Goodies</td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -246,7 +236,6 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
-                            <td>Goodies</td>
                         </tr>
                     </tbody>
                 </table>

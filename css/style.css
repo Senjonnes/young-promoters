@@ -233,10 +233,15 @@ h1::after {
     padding: 15px 0;
     position: absolute;
     z-index: 2;
-    bottom: 30%;
+    bottom: 20%;
     left: 32%;
     transform: translateY(-50%);
     opacity: 0;
+}
+
+.img-box .subordinates {
+    bottom: 5%;
+    left: 30%;
 }
 
 .img-box ul li {
@@ -626,11 +631,11 @@ h1::after {
 }
 
 #savings-table .col-md-6:first-child {
-    margin-right: -190px!important;
+    margin-right: -460px!important;
 }
 
 #savings-table .col-md-5 {
-    margin-right: -45px!important;
+    margin-right: -460px!important;
 }
 
 #savings-table .row-num {
@@ -667,11 +672,11 @@ h1::after {
 }
 
 #each-member-instalment .col-md-6:first-child {
-    margin-right: -230px!important;
+    margin-right: -485px!important;
 }
 
 #each-member-instalment .col-md-5 {
-    margin-right: -85px!important;
+    margin-right: -485px!important;
 }
 
 #each-member-instalment .row-num {

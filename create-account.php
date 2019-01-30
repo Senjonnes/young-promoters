@@ -49,31 +49,46 @@
                         <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
                     </form>
                 </div>
-                <div class="col-md-4" id="log-in" style="margin-left:auto;">
-                    <h2>Change Password</h2>
-                    <form class="form-container">
-                        <div class="form-group log-in">
-                            <label for="username" class="input-name">Email Address</label>
-                            <input type="email" id="email" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Username">
+                <div class="col-md-6" id="signup" style="margin-left:auto;">
+                    <h2>Create Account</h2>
+                    <form class="row">
+                        <div class="form-group log-in col-md-6">
+                            <label for="name" class="input-name">First Name</label>
+                            <input type="text" id="first-name" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="First Name">
                             <i class="fa fa-user fa-lg fa-fw"></i>
                         </div>
-                        <div class="form-group log-in">
-                            <label for="password" class="input-name">New Password</label>
-                            <input type="password" id="password" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="New Password">
+                        <div class="form-group log-in col-md-6">
+                            <label for="name" class="input-name">Last Name</label>
+                            <input type="text" id="last-name" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Last Name">
+                            <i class="fa fa-user fa-lg fa-fw"></i>
+                        </div>
+                        <div class="form-group log-in col-md-6">
+                            <label for="email" class="input-name">Email Address</label>
+                            <input type="email" id="email" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Email">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="form-group log-in col-md-6">
+                            <label for="username" class="input-name">Username</label>
+                            <input type="text" id="username" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Username">
+                            <i class="fa fa-user fa-lg fa-fw"></i>
+                        </div>
+                        <div class="form-group log-in col-md-6">
+                            <label for="password" class="input-name">Password</label>
+                            <input type="password" id="password" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Password">
                             <i class="fa fa-lock fa-lg fa-fw"></i>
                         </div>
-                        <div class="form-group log-in">
+                        <div class="form-group log-in col-md-6">
                             <label for="password" class="input-name">Confirm Password</label>
-                            <input type="password" id="password" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Confirm Password">
+                            <input type="password" id="confirm-password" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Confirm Password">
                             <i class="fa fa-lock fa-lg fa-fw"></i>
                         </div>
-                        <input id="login" type="button" name="submit" class="btn btn-primary btn-block" value="CONFIRM">
-                        <div class="click">
-                            <label for="button">Click</label>
-                            <a href="create-account.php">here</a>
-                            <label for="button">to create an account</label>
-                        </div>
+                        <input id="login" type="button" name="submit" class="btn btn-primary btn-block" value="Signup">
                     </form>
+                    <div class="click text-right">
+                        <label for="button">Back to</label>
+                        <a href="login.php">login</a>
+                        <label for="button">page</label>
+                    </div>
                 </div>
             </div>
         </div>

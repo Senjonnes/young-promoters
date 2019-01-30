@@ -19,9 +19,10 @@ $names = mysqli_query($con, $membersname);
     <meta name="keywords" content="YPAN, coorperative, contribution, loan and payment">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <!-- Font awesome starts -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Font awesome ends -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -160,7 +161,7 @@ $names = mysqli_query($con, $membersname);
                             <?php endwhile; ?>
                         </select>
                     </form>
-                    <a href="loanbond.html" class="btn btn-primary">Get Loan Bond</a>
+                    <a href="loanbond.php" class="btn btn-primary">Show Instalment</a>
                 </div>
             </div>
         </div>
@@ -171,12 +172,12 @@ $names = mysqli_query($con, $membersname);
             <div class="row justify-content-start">
                 <div class="col-2">
                     <p class="account-name">Name of Hirer:</p>
-                    <p class="account-number">Vehicle Number:</p>
+                    <!-- <p class="account-number">Vehicle Number:</p> -->
                     <p class="account-number">Bal due on vehicle:</p>
                 </div>
                 <div class="col-2">
                     <p class="values">ODEYEMI KEHINDE</p>
-                    <p class="values">03</p>
+                    <!-- <p class="values">03</p> -->
                     <p class="values">2300000</p>
                 </div>
             </div>
@@ -185,58 +186,50 @@ $names = mysqli_query($con, $membersname);
                 <table id="instalmentTable" class="table table-responsive table-striped table-hover">
                     <thead>
                         <tr class="table-info">
-                            <th>No. of Instalment</th>
                             <th>Date</th>
+                            <th>Particulars</th>
                             <th>Amount Paid</th>
                             <th>Amount Balance</th>
-                            <th>Comments</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1,000,000</td>
                             <td>01/01/2019</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>Goodies</td>
                         </tr>
                         <tr>
-                            <td>1,000,000</td>
                             <td>01/01/2019</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>Goodies</td>
                         </tr>
                         <tr>
-                            <td>1,000,000</td>
                             <td>01/01/2019</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>Goodies</td>
                         </tr>
                         <tr>
-                            <td>1,000,000</td>
                             <td>01/01/2019</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>Goodies</td>
                         </tr>
                         <tr>
-                            <td>1,000,000</td>
                             <td>01/01/2019</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>Goodies</td>
                         </tr>
                         <tr>
-                            <td>1,000,000</td>
                             <td>01/01/2019</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>Goodies</td>
                         </tr>
                         <tr>
-                            <td>1,000,000</td>
                             <td>01/01/2019</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>

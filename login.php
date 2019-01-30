@@ -20,35 +20,100 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <form class="form-container">
-                    <h3>Login</h3>
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" class="form-control" placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" class="form-control" placeholder="Password">
-                    </div>
-                    <input id="login" type="button" name="submit" class="btn btn-primary btn-block" value="LOGIN">
-                    <div class="buttomText">
-                        <label class="forgotPassword" for="forgotPassword">Forgot your password ?</label>
-                    </div>
-                    <div class="click">
-                        <label for="button">Click</label>
-                        <a href="change-password.php">here</a>
-                        <label for="button">to reset your password</label>
-                    </div>
-                </form>
-                <div class="footname">
-                    <p class="compName">2019 &copy; Young Promoters Nigeria Limited</p>
+    <section id="company-logo">
+        <div class="row">
+            <div class="col-md-4 company-logo">
+                <a class="navbar-brand" href="#top"><img src="img/ypl.png"></a>
+            </div>
+        </div>
+    </section>
+    <!-- Get in Touch -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Get In Touch</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Id">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <div class="col-md-4" id="log-in" style="margin-left:auto;">
+                    <h2>LOGIN</h2>
+                    <form class="form-container">
+                        <div class="form-group log-in">
+                            <label for="username" class="input-name">Username</label>
+                            <input type="text" id="username" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Username">
+                            <i class="fa fa-user fa-lg fa-fw"></i>
+                        </div>
+                        <div class="form-group log-in">
+                            <label for="password" class="input-name">Password</label>
+                            <input type="password" id="password" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Password">
+                            <i class="fa fa-lock fa-lg fa-fw"></i>
+                        </div>
+                        <input id="login" type="button" name="submit" class="btn btn-primary btn-block" value="LOGIN">
+                        <div class="buttomText">
+                            <label class="forgotPassword" for="forgotPassword"><a href="change-password.php"> Forgot your password ?</a></label>
+                        </div>
+                        <div class="row">
+                            <div class="col"><hr class="border"></div>
+                            <div class="col-auto">OR</div>
+                            <div class="col"><hr class="border"></div>
+                        </div>
+                        <div class="click">
+                            <label for="button">Click</label>
+                            <a href="create-account.php">here</a>
+                            <label for="button">to create an account</label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section id="address">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 contact-info" style="padding:10px;">
+                    <h6 style="text-align:center;">OUR SERVICE</h6>
+                    <ul class="items">
+                        <li><i class="fa fa-check-circle"></i>Own a secured savings account</li>
+                        <li><i class="fa fa-check-circle"></i>Get Loan</li>
+                        <li><i class="fa fa-check-circle"></i>And many more</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 contact-info" style="text-align:center; padding:10px;">
+                    <h6>GET SOCIAL</h6>
+                    <p>Follow us on any of our social media to get updates and read many amazing feeds</p>
+                    <div class="follow">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 contact-info" style="padding:10px;">
+                    <h6 style="text-align:center;">CONTACT US</h6>
+                    <div class="items">
+                        <div class="follow"><b>Address: </b><i class="fa fa-map-marker"></i> XYZ Road,
+                        Bangalore, IN</div>
+                        <div class="follow"><b>Phone: </b><i class="fa fa-phone"></i> +234 7039347005</div>
+                        <div class="follow"><b>Email: </b><i class="fa fa-envelope-o"></i> senjonnes@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="js/main.js"></script>
 </body>
 </html>
