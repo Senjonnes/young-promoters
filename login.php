@@ -49,7 +49,7 @@
                         <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
                     </form>
                 </div>
-                <div class="col-md-4" id="log-in" style="margin-left:auto;">
+                <div class="col-md-4" id="log-in" style="margin-left:auto; width:100%;">
                     <h2>LOGIN</h2>
                     <form class="form-container">
                         <div class="form-group log-in">
