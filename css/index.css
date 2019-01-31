@@ -9,6 +9,7 @@ body {
     background-size: cover;
     font-family: sans-serif;
     background-repeat: no-repeat;
+    height: 100%;
 }
 
 @media only screen and (max-width: 600px) {

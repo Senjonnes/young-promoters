@@ -81,7 +81,7 @@
             </div>
         </div>
     </section>
-    <section id="address">
+    <section id="address" class="navbar-fixed-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 contact-info" style="padding:10px;">
