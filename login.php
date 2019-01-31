@@ -118,7 +118,7 @@
     <script>
         $(document).ready(function() {
 
-            var docHeight = $(window).height();
+            var docHeight = $(window).outerHeight();
             var footerHeight = $('#address').height();
             var footerTop = $('#address').position().top + footerHeight;
 
