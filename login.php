@@ -81,7 +81,7 @@
             </div>
         </div>
     </section>
-    <section id="address" class="navbar-fixed-bottom">
+    <section id="address">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 contact-info" style="padding:10px;">
@@ -115,5 +115,16 @@
         </div>
     </section>
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var docHeight = $(window).height();
+            var footerHeight = $('#address').height();
+            var footerTop = $('#address').position().top + footerHeight;
+
+            if (footerTop < docHeight)
+                $('#address').css('margin-top', 10+ (docHeight - footerTop) + 'px');
+        });
+    </script>
 </body>
 </html>
