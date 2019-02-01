@@ -100,15 +100,15 @@ $names = mysqli_query($con, $membersname);
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="date">Date</label>
-                                    <input type="date" name="date" class="form-control" placeholder="Date">
+                                    <input type="date" name="date" class="form-control" id="thedate" placeholder="Date">
                                 </div>
                                 <div class="form-group">
                                     <label for="savings">Members' Savings</label>
-                                    <input type="number" name="savings" class="form-control" placeholder="Members Savings">
+                                    <input type="number" name="savings" class="form-control" id="themembersavings" placeholder="Members Savings">
                                 </div>
                                 <div class="form-group">
                                     <label for="fee">Entrance Fee</label>
-                                    <input type="number" name="fee" class="form-control" placeholder="Entrance Fee">
+                                    <input type="number" name="fee" class="form-control" id="theentrancefee" placeholder="Entrance Fee">
                                 </div>
                             </div>
                         </div>
@@ -116,15 +116,15 @@ $names = mysqli_query($con, $membersname);
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="installment">Instalment</label>
-                                    <input type="number" name="instalment" class="form-control" placeholder="Installment">
+                                    <input type="number" name="instalment" class="form-control" id="theinstalment" placeholder="Installment">
                                 </div>
                                 <div class="form-group">
                                     <label for="interest">Fines</label>
-                                    <input type="number" name="interest" class="form-control" placeholder="Fines">
+                                    <input type="number" name="interest" class="form-control" id="thefines" placeholder="Fines">
                                 </div>
                                 <div class="form-group">
                                     <label for="sundry">Shop</label>
-                                    <input type="number" name="sundry" class="form-control" placeholder="Shop">
+                                    <input type="number" name="sundry" class="form-control" id="theshop" placeholder="Shop">
                                 </div>
                             </div>
                         </div>
@@ -132,15 +132,15 @@ $names = mysqli_query($con, $membersname);
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="deposit">Expenditure</label>
-                                    <input type="number" name="deposit" class="form-control" placeholder="Expenditure">
+                                    <input type="number" name="deposit" class="form-control" id="theexpenditure" placeholder="Expenditure">
                                 </div>
                                 <div class="form-group">
                                     <label for="expendicture">Loan</label>
-                                    <input type="number" name="expendicture" class="form-control" placeholder="Loan">
+                                    <input type="number" name="expendicture" class="form-control" id="theloan" placeholder="Loan">
                                 </div>
                                 <div class="form-group">
                                     <label for="loan">Balance</label>
-                                    <input type="number" name="loan" class="form-control" placeholder="Balance">
+                                    <input type="number" name="loan" class="form-control" id="thebalance" placeholder="Balance">
                                 </div>
                             </div>
                         </div>
@@ -149,13 +149,13 @@ $names = mysqli_query($con, $membersname);
                         <div class="col-md-6 offset-md-3">
                             <div class="form-group" id="base2">
                                 <label for="comment">Comment</label>
-                                <input type="text" name="comment" class="form-control" placeholder="Comment">
+                                <input type="text" name="comment" class="form-control" id="thecomment" placeholder="Comment">
                             </div>
                         </div>
                     </div>
                     
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Add Entry</button>
+                        <button type="submit" class="btn btn-success" onclick="addEntry()">Add Entry</button>
                     </div>
                 </div>
             </div>
@@ -187,14 +187,14 @@ $names = mysqli_query($con, $membersname);
                         <?php while($row=mysqli_fetch_assoc($result)) :?>
                             <tr>
                                 <td><span class="txt spandates"><?= date_format(date_create($row['dates']), 'd/m/Y'); ?></span><input type="date" class="form-control dates txtbox" value="<?= $row['dates']; ?>" style="display:none"></td>
-                                <td><span class="txt spanmembersavings"><?= $row['membersavings']; ?></span><input type="text" class="form-control membersavings txtbox" value="<?= $row['membersavings']; ?>" style="display:none"></td>
-                                <td><span class="txt spanentrancefees"><?= $row['entrancefees']; ?></span><input type="text" class="form-control entrancefees txtbox" value="<?= $row['entrancefees']; ?>" style="display:none"></td>
-                                <td><span class="txt spaninstalment"><?= $row['instalment']; ?></span><input type="text" class="form-control instalment txtbox" value="<?= $row['instalment']; ?>" style="display:none"></td>
-                                <td><span class="txt spanfines"><?= $row['fines']; ?></span><input type="text" class="form-control fines txtbox" value="<?= $row['fines']; ?>" style="display:none"></td>
-                                <td><span class="txt spanshop"><?= $row['shop']; ?></span><input type="text" class="form-control shop txtbox" value="<?= $row['shop']; ?>" style="display:none"></td>
-                                <td><span class="txt spanexpendictures"><?= $row['expendictures']; ?></span><input type="text" class="form-control expendictures txtbox" value="<?= $row['expendictures']; ?>" style="display:none"></td>
-                                <td><span class="txt spanloan"><?= $row['loan']; ?></span><input type="text" class="form-control loan txtbox" value="<?= $row['loan']; ?>" style="display:none"></td>
-                                <td><span class="txt spanbalance"><?= $row['balance']; ?></span><input type="text" class="form-control balance txtbox" value="<?= $row['balance']; ?>" style="display:none"></td>
+                                <td><span class="txt spanmembersavings"><?= $row['membersavings']; ?></span><input type="number" class="form-control membersavings txtbox" value="<?= $row['membersavings']; ?>" style="display:none"></td>
+                                <td><span class="txt spanentrancefees"><?= $row['entrancefees']; ?></span><input type="number" class="form-control entrancefees txtbox" value="<?= $row['entrancefees']; ?>" style="display:none"></td>
+                                <td><span class="txt spaninstalment"><?= $row['instalment']; ?></span><input type="number" class="form-control instalment txtbox" value="<?= $row['instalment']; ?>" style="display:none"></td>
+                                <td><span class="txt spanfines"><?= $row['fines']; ?></span><input type="number" class="form-control fines txtbox" value="<?= $row['fines']; ?>" style="display:none"></td>
+                                <td><span class="txt spanshop"><?= $row['shop']; ?></span><input type="number" class="form-control shop txtbox" value="<?= $row['shop']; ?>" style="display:none"></td>
+                                <td><span class="txt spanexpendictures"><?= $row['expendictures']; ?></span><input type="number" class="form-control expendictures txtbox" value="<?= $row['expendictures']; ?>" style="display:none"></td>
+                                <td><span class="txt spanloan"><?= $row['loan']; ?></span><input type="number" class="form-control loan txtbox" value="<?= $row['loan']; ?>" style="display:none"></td>
+                                <td><span class="txt spanbalance"><?= $row['balance']; ?></span><input type="number" class="form-control balance txtbox" value="<?= $row['balance']; ?>" style="display:none"></td>
                                 <td><span class="txt spancomment"><?= $row['comment']; ?></span><input type="text" class="form-control comment txtbox" value="<?= $row['comment']; ?>" style="display:none"></td>
                                 <td>
                                     <input type="hidden" class="id" value="<?= $row['id']; ?>">
@@ -244,6 +244,47 @@ $names = mysqli_query($con, $membersname);
             });
         });
 
+        // FOR THE MODAL ENTRY
+        function addEntry() {
+            let thedate = document.getElementById("thedate").value;
+            let themembersavings = document.getElementById("themembersavings").value;
+            let theentrancefee = document.getElementById("theentrancefee").value;
+            let theinstalment = document.getElementById("theinstalment").value;
+            let theloan = document.getElementById("theloan").value;
+            let thefines = document.getElementById("thefines").value;
+            let theshop = document.getElementById("theshop").value;
+            let theexpenditure = document.getElementById("theexpenditure").value;
+            let thebalance = document.getElementById("thebalance").value;
+            let thecomment = document.getElementById("thecomment").value;
+
+            axios.post('addsavings.php', {
+                thedate: thedate,
+                themembersavings : themembersavings,
+                theentrancefee: theentrancefee,
+                theinstalment: theinstalment,
+                theloan: theloan,
+                thefines: thefines,
+                theshop: theshop,
+                theexpenditure: theexpenditure,
+                thebalance: thebalance,
+                thecomment: thecomment,
+            }).then(function(response){
+                console.log(response);
+
+                if(response.data.status==1){
+                    $.notify("Entry Added!", "success");
+                }else if(response.data.status==0){
+                    //Notification
+                    $.notify("No Entry Added!", "error");
+                }
+                
+            }).catch(function(error){
+                console.log(error);
+
+                //Notification
+                $.notify("No Entry Added!", "error");
+            });
+        }
 
 
         function edit(obj){

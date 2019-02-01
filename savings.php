@@ -34,6 +34,9 @@ $names = mysqli_query($con, $membersname);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/notify.js"></script>
+    <script src="js/sweetalert.min.js"></script>
 </head>
 <body>
     <!--NavigationBar-->
@@ -185,6 +188,7 @@ $names = mysqli_query($con, $membersname);
                             <th>Withdrawal</th>
                             <th>Deposit</th>
                             <th>Balance</th>
+                            <th>Option</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -194,6 +198,18 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
+                            <td>
+                                <input type="hidden" class="id" value="<?= $row['id']; ?>">
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-warning btn-sm edit" title="Edit" onclick="edit(this)"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-danger btn-sm trash" title="Delete" onclick="deleteo(this)"><i class="fa fa-trash"></i></button>
+                                </div>
+                                
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-success btn-sm update" title="Update" onclick="update(this)" style="display:none"><i class="fa fa-check"></i></button>
+                                    <button class="btn btn-default btn-sm cancel" title="Cancel" onclick="cancel(this)" style="display:none"><i class="fa fa-remove"></i></button>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -201,6 +217,18 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
+                            <td>
+                                <input type="hidden" class="id" value="<?= $row['id']; ?>">
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-warning btn-sm edit" title="Edit" onclick="edit(this)"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-danger btn-sm trash" title="Delete" onclick="deleteo(this)"><i class="fa fa-trash"></i></button>
+                                </div>
+                                
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-success btn-sm update" title="Update" onclick="update(this)" style="display:none"><i class="fa fa-check"></i></button>
+                                    <button class="btn btn-default btn-sm cancel" title="Cancel" onclick="cancel(this)" style="display:none"><i class="fa fa-remove"></i></button>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -208,6 +236,18 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
+                            <td>
+                                <input type="hidden" class="id" value="<?= $row['id']; ?>">
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-warning btn-sm edit" title="Edit" onclick="edit(this)"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-danger btn-sm trash" title="Delete" onclick="deleteo(this)"><i class="fa fa-trash"></i></button>
+                                </div>
+                                
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-success btn-sm update" title="Update" onclick="update(this)" style="display:none"><i class="fa fa-check"></i></button>
+                                    <button class="btn btn-default btn-sm cancel" title="Cancel" onclick="cancel(this)" style="display:none"><i class="fa fa-remove"></i></button>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -215,6 +255,18 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
+                            <td>
+                                <input type="hidden" class="id" value="<?= $row['id']; ?>">
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-warning btn-sm edit" title="Edit" onclick="edit(this)"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-danger btn-sm trash" title="Delete" onclick="deleteo(this)"><i class="fa fa-trash"></i></button>
+                                </div>
+                                
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-success btn-sm update" title="Update" onclick="update(this)" style="display:none"><i class="fa fa-check"></i></button>
+                                    <button class="btn btn-default btn-sm cancel" title="Cancel" onclick="cancel(this)" style="display:none"><i class="fa fa-remove"></i></button>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -222,6 +274,18 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
+                            <td>
+                                <input type="hidden" class="id" value="<?= $row['id']; ?>">
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-warning btn-sm edit" title="Edit" onclick="edit(this)"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-danger btn-sm trash" title="Delete" onclick="deleteo(this)"><i class="fa fa-trash"></i></button>
+                                </div>
+                                
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-success btn-sm update" title="Update" onclick="update(this)" style="display:none"><i class="fa fa-check"></i></button>
+                                    <button class="btn btn-default btn-sm cancel" title="Cancel" onclick="cancel(this)" style="display:none"><i class="fa fa-remove"></i></button>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -229,6 +293,18 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
+                            <td>
+                                <input type="hidden" class="id" value="<?= $row['id']; ?>">
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-warning btn-sm edit" title="Edit" onclick="edit(this)"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-danger btn-sm trash" title="Delete" onclick="deleteo(this)"><i class="fa fa-trash"></i></button>
+                                </div>
+                                
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-success btn-sm update" title="Update" onclick="update(this)" style="display:none"><i class="fa fa-check"></i></button>
+                                    <button class="btn btn-default btn-sm cancel" title="Cancel" onclick="cancel(this)" style="display:none"><i class="fa fa-remove"></i></button>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>01/01/2019</td>
@@ -236,7 +312,19 @@ $names = mysqli_query($con, $membersname);
                             <td>1,000,000</td>
                             <td>1,000,000</td>
                             <td>1,000,000</td>
-                        </tr>
+                            <td>
+                                <input type="hidden" class="id" value="<?= $row['id']; ?>">
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-warning btn-sm edit" title="Edit" onclick="edit(this)"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-danger btn-sm trash" title="Delete" onclick="deleteo(this)"><i class="fa fa-trash"></i></button>
+                                </div>
+                                
+                                <div class="btn-group" role="group" style="display:flex;">
+                                    <button class="btn btn-success btn-sm update" title="Update" onclick="update(this)" style="display:none"><i class="fa fa-check"></i></button>
+                                    <button class="btn btn-default btn-sm cancel" title="Cancel" onclick="cancel(this)" style="display:none"><i class="fa fa-remove"></i></button>
+                                </div>
+                            </td>
+                        </tr>                            
                     </tbody>
                 </table>
             </div>            
@@ -251,7 +339,7 @@ $names = mysqli_query($con, $membersname);
     <!-- Footer End -->
     <script src="js/main.js"></script>
     <script src="js/smooth-scroll.js"></script>
-    <script src="js/bootstable.js"></script>
+    <!-- <script src="js/bootstable.js"></script> -->
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
         $(document).ready( function () {
@@ -262,6 +350,6 @@ $names = mysqli_query($con, $membersname);
                 width: 'resolve' // need to override the changed default
             });
         });
-        $('#savingsTable').SetEditable();
-        </script>
+        // $('#savingsTable').SetEditable();
+    </script>
 </html>

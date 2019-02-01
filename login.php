@@ -62,7 +62,7 @@
                             <input type="password" id="password" class="form-control" style="padding-left: 40px;" placeholder="Password">
                             <i class="fa fa-lock fa-fw"></i>
                         </div>
-                        <input id="login" type="button" name="submit" class="btn btn-primary btn-block" style="border-radius:0!important;" value="LOGIN &#8594;">
+                        <input id="login" type="button" name="submit" class="btn btn-primary btn-block" style="border-radius:0!important;" value="LOGIN &#10144;">
                         <div class="buttomText">
                             <label class="forgotPassword" for="forgotPassword"><a href="change-password.php"> Forgot your password ?</a></label>
                         </div>
