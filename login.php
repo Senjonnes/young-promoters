@@ -46,7 +46,7 @@
                         <div class="form-group">
                             <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                        <button type="submit" class="btn btn-primary" style="border-radius:0!important;">SEND MESSAGE</button>
                     </form>
                 </div>
                 <div class="col-md-4" id="log-in" style="margin-left:auto; width:100%;">
@@ -54,15 +54,15 @@
                     <form class="form-container">
                         <div class="form-group log-in">
                             <label for="username" class="input-name">Username</label>
-                            <input type="text" id="username" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Username">
+                            <input type="text" id="username" class="form-control" style="padding-left: 40px;" placeholder="Username">
                             <i class="fa fa-user fa-fw"></i>
                         </div>
                         <div class="form-group log-in">
                             <label for="password" class="input-name">Password</label>
-                            <input type="password" id="password" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Password">
+                            <input type="password" id="password" class="form-control" style="padding-left: 40px;" placeholder="Password">
                             <i class="fa fa-lock fa-fw"></i>
                         </div>
-                        <input id="login" type="button" name="submit" class="btn btn-primary btn-block" value="LOGIN">
+                        <input id="login" type="button" name="submit" class="btn btn-primary btn-block" style="border-radius:0!important;" value="LOGIN &#8594;">
                         <div class="buttomText">
                             <label class="forgotPassword" for="forgotPassword"><a href="change-password.php"> Forgot your password ?</a></label>
                         </div>
@@ -81,7 +81,7 @@
             </div>
         </div>
     </section>
-    <section id="address">
+    <footer id="address">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 contact-info text-left" style="padding:10px;">
@@ -113,7 +113,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
     <script src="js/main.js"></script>
     <script>
         $(document).ready(function() {

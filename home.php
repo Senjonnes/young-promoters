@@ -189,7 +189,7 @@ $names = mysqli_query($con, $membersname);
     <section id="team">
         <div class="container">
             <h1>Company Exceutive Members</h1>
-            <div class="row justify-content-center">
+            <div class="row d-flex justify-content-center">
                 <div class="col-md-4 profile-pic text-center">
                     <div class="img-box">
                         <img src="img/n.jpg" class="img-responsive rounded-circle">
@@ -205,7 +205,7 @@ $names = mysqli_query($con, $membersname);
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row d-flex justify-content-center">
                 <div class="col-md-4 profile-pic text-center">
                     <div class="img-box">
                         <img src="img/n.jpg" class="img-responsive  rounded-circle">
@@ -335,7 +335,7 @@ $names = mysqli_query($con, $membersname);
                         <div class="form-group">
                             <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                        <button type="submit" class="btn btn-primary" style="border-radius:0!important;">SEND MESSAGE</button>
                     </form>
                 </div>
                 <div class="col-md-6 contact-info">
