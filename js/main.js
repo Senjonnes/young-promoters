@@ -17,5 +17,4 @@ function printcontent(el) {
     document.body.innerHTML = printContent;
     window.print();
     document.body.innerHTML = restorepage;
-
 }

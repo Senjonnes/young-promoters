@@ -55,12 +55,12 @@
                         <div class="form-group log-in">
                             <label for="username" class="input-name">Username</label>
                             <input type="text" id="username" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Username">
-                            <i class="fa fa-user fa-lg fa-fw"></i>
+                            <i class="fa fa-user fa-fw"></i>
                         </div>
                         <div class="form-group log-in">
                             <label for="password" class="input-name">Password</label>
                             <input type="password" id="password" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Password">
-                            <i class="fa fa-lock fa-lg fa-fw"></i>
+                            <i class="fa fa-lock fa-fw"></i>
                         </div>
                         <input id="login" type="button" name="submit" class="btn btn-primary btn-block" value="LOGIN">
                         <div class="buttomText">

@@ -190,7 +190,7 @@ $names = mysqli_query($con, $membersname);
         <div class="container">
             <h1>Company Exceutive Members</h1>
             <div class="row justify-content-center">
-                <div class="col-md-3 profile-pic text-center">
+                <div class="col-md-4 profile-pic text-center">
                     <div class="img-box">
                         <img src="img/n.jpg" class="img-responsive rounded-circle">
                         <ul>
@@ -206,7 +206,7 @@ $names = mysqli_query($con, $membersname);
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-3 profile-pic text-center">
+                <div class="col-md-4 profile-pic text-center">
                     <div class="img-box">
                         <img src="img/n.jpg" class="img-responsive  rounded-circle">
                         <ul>

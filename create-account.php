@@ -55,12 +55,12 @@
                         <div class="form-group log-in col-md-6">
                             <label for="name" class="input-name">First Name</label>
                             <input type="text" id="first-name" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="First Name">
-                            <i class="fa fa-user fa-lg fa-fw"></i>
+                            <i class="fa fa-user fa-fw"></i>
                         </div>
                         <div class="form-group log-in col-md-6">
                             <label for="name" class="input-name">Last Name</label>
                             <input type="text" id="last-name" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Last Name">
-                            <i class="fa fa-user fa-lg fa-fw"></i>
+                            <i class="fa fa-user fa-fw"></i>
                         </div>
                         <div class="form-group log-in col-md-6">
                             <label for="email" class="input-name">Email Address</label>
@@ -70,17 +70,17 @@
                         <div class="form-group log-in col-md-6">
                             <label for="username" class="input-name">Username</label>
                             <input type="text" id="username" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Username">
-                            <i class="fa fa-user fa-lg fa-fw"></i>
+                            <i class="fa fa-user fa-fw"></i>
                         </div>
                         <div class="form-group log-in col-md-6">
                             <label for="password" class="input-name">Password</label>
                             <input type="password" id="password" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Password">
-                            <i class="fa fa-lock fa-lg fa-fw"></i>
+                            <i class="fa fa-lock fa-fw"></i>
                         </div>
                         <div class="form-group log-in col-md-6">
                             <label for="password" class="input-name">Confirm Password</label>
                             <input type="password" id="confirm-password" class="form-control" style="border-radius:3px!important;padding-left: 40px;" placeholder="Confirm Password">
-                            <i class="fa fa-lock fa-lg fa-fw"></i>
+                            <i class="fa fa-lock fa-fw"></i>
                         </div>
                         <input id="login" type="button" name="submit" class="btn btn-primary btn-block" value="Signup">
                     </form>
@@ -96,16 +96,16 @@
     <section id="address">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 contact-info" style="padding:10px;">
-                    <h6 style="text-align:center;">OUR SERVICE</h6>
+                <div class="col-md-4 contact-info text-left" style="padding:10px;">
+                    <h6><span>OUR SERVICE</span></h6>
                     <ul class="items">
                         <li><i class="fa fa-check-circle"></i>Own a secured savings account</li>
                         <li><i class="fa fa-check-circle"></i>Get Loan</li>
                         <li><i class="fa fa-check-circle"></i>And many more</li>
                     </ul>
                 </div>
-                <div class="col-md-4 contact-info" style="text-align:center; padding:10px;">
-                    <h6>GET SOCIAL</h6>
+                <div class="col-md-4 contact-info text-center" style="padding:10px;">
+                    <h6 style="margin:auto; padding-bottom:10px;"><span>GET SOCIAL</span></h6>
                     <p>Follow us on any of our social media to get updates and read many amazing feeds</p>
                     <div class="follow">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -114,8 +114,8 @@
                         <a href="#"><i class="fa fa-google-plus"></i></a>
                     </div>
                 </div>
-                <div class="col-md-4 contact-info" style="padding:10px;">
-                    <h6 style="text-align:center;">CONTACT US</h6>
+                <div class="col-md-4 contact-info text-right" style="padding:10px;">
+                    <h6 style="margin:auto;"><span>CONTACT US</span></h6>
                     <div class="items">
                         <div class="follow"><b>Address: </b><i class="fa fa-map-marker"></i> XYZ Road,
                         Bangalore, IN</div>
@@ -127,5 +127,16 @@
         </div>
     </section>
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var docHeight = $(window).outerHeight();
+            var footerHeight = $('#address').height();
+            var footerTop = $('#address').position().top + footerHeight;
+
+            if (footerTop < docHeight)
+                $('#address').css('margin-top', 10+ (docHeight - footerTop) + 'px');
+        });
+    </script>
 </body>
 </html>
