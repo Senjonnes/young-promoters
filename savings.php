@@ -8,8 +8,12 @@ $membersname2 = "SELECT * FROM members";
 $names2 = mysqli_query($con, $membersname2);
 
 
-$membersavings = "SELECT * FROM savings S INNER JOIN members M ON S.member_id = M.id";
-$savings = mysqli_query($con, $membersavings);
+if (isset($_POST["members_name"])){
+    $members_name = $_POST["members_name"];
+    $membersavings = "SELECT * FROM members M LEFT JOIN savings S ON M.id = S.member_id
+    WHERE m.id = '$members_name'";
+    $savings = mysqli_query($con, $membersavings);
+}
 
 
 ?>
@@ -92,64 +96,52 @@ $savings = mysqli_query($con, $membersavings);
     <!-- Modal Entry -->
     <section id="entry">
         <div class="open-button">
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Add Account</button>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Add New Entry</button>
         </div>
         <div class="modal fade" role="dialog" id="loginModal">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-fluid">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="modal-title">New Savings Account</h3>
+                        <h3 class="modal-title">New Savings Entry</h3>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="number">Account Number</label>
-                                    <input type="text" name="number" class="form-control" placeholder="Number">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="date">Date</label>
-                                    <input type="date" name="date" class="form-control" placeholder="Date">
+                                    <input type="date" name="date" class="form-control" placeholder="Date" id="thedate">
                                 </div>
                                 <div class="form-group">
                                     <label for="particulars">Particulars</label>
-                                    <input type="text" name="particulars" class="form-control" placeholder="Particulars">
+                                    <input type="text" name="particulars" class="form-control" placeholder="Particulars" id="theparticular">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="withdraw">Withdrawal</label>
-                                    <input type="number" name="withdraw" class="form-control" placeholder="Withdraw">
+                                    <input type="number" name="withdraw" class="form-control" placeholder="Withdraw" id="thewithdrawal">
                                 </div>
                                 <div class="form-group">
                                     <label for="deposit">Deposit</label>
-                                    <input type="number" name="deposit" class="form-control" placeholder="Deposit">
+                                    <input type="number" name="deposit" class="form-control" placeholder="Deposit" id="thedeposit">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 offset-md-3">
+                        <div class="col-md-8 offset-md-2">
                             <div class="form-group" id="base">
                                 <label for="balance">Balance</label>
-                                <input type="number" name="balance" class="form-control" placeholder="Balance">
+                                <input type="number" name="balance" class="form-control" placeholder="Balance" id="thebalance">
                             </div>
                         </div>
                     </div>
                     
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Create Account</button>
+                        <button type="submit" class="btn btn-success" onclick="addNewEntry()">Add Entry</button>
                     </div>
                 </div>
             </div>
@@ -161,15 +153,15 @@ $savings = mysqli_query($con, $membersavings);
             <h1>Members' Savings Account</h1>
             <div class="row">
                 <div class="col-md-6 text-center" style="margin:auto;">
-                    <form>
-                        <select class="chosen-select" style="width: 100%">
+                    <form method="post" action="">
+                        <select class="chosen-select" style="width: 100%" name="members_name">
                         <option disabled selected>Member's Name</option>
                             <?php while($row=mysqli_fetch_assoc($names2)) :?>
-                                <option><?php echo $row['name']; ?></option>
+                                <option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
                             <?php endwhile; ?>
                         </select>
+                        <button type="submit" class="btn btn-primary">Show Account</button>
                     </form>
-                    <a href="loanbond.php" class="btn btn-primary">Show Account</a>
                 </div>
             </div>
         </div>
@@ -178,7 +170,7 @@ $savings = mysqli_query($con, $membersavings);
     <section id="savings-table">
         <div class="container">
             <div class="row justify-content-start">
-                <?php $row=mysqli_fetch_assoc($savings) ?>
+                <?php $row=mysqli_fetch_assoc($savings); ?>
                     <div class="col-2">
                         <p class="account-name">Name:</p>
                         <p class="account-number">Account Number:</p>
@@ -187,7 +179,6 @@ $savings = mysqli_query($con, $membersavings);
                         <p class="values"><?= $row['name']; ?></p>
                         <p class="values"><?= $row['accountnumber']; ?></p>
                     </div>
-                <?php ?>
             </div>
             <div class="account-table">
                 <p class="row-num">Select Number of Rows</p>
@@ -203,7 +194,7 @@ $savings = mysqli_query($con, $membersavings);
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $row=mysqli_fetch_assoc($savings) ?>
+                        <?php while($row=mysqli_fetch_assoc($savings)) :?>
                             <tr>
                                 <td><span class="txt spandates"><script>document.write(new Date("<?php echo $row['dates']; ?>").toString('dd/MM/yyyy'))</script></span><input type="date" class="form-control dates txtbox" value="<?= $row['dates']; ?>" style="display:none"></td>
                                 <td><span class="txt spanparticulars"><?= $row['particulars']; ?></span><input type="text" class="form-control particulars txtbox" value="<?= $row['particulars']; ?>" style="display:none"></td>
@@ -223,7 +214,7 @@ $savings = mysqli_query($con, $membersavings);
                                     </div>
                                 </td>
                             </tr>
-                        <?php ?>                            
+                        <?php endwhile; ?>                            
                     </tbody>
                 </table>
             </div>            
@@ -250,6 +241,39 @@ $savings = mysqli_query($con, $membersavings);
             });
         });
         // $('#savingsTable').SetEditable();
+
+
+        // FOR THE MODAL ENTRY
+        function addEntry() {
+            let thedate = document.getElementById("thedate").value;
+            let theparticular = document.getElementById("theparticular").value;
+            let thewithdrawal = document.getElementById("thewithdrawal").value;
+            let thedeposit = document.getElementById("thedeposit").value;
+            let thebalance = document.getElementById("thebalance").value;
+
+            axios.post('addsavings.php', {
+                thedate: thedate,
+                theparticular : theparticular,
+                thewithdrawal: thewithdrawal,
+                thedeposit: thedeposit,
+                thebalance: thebalance,
+            }).then(function(response){
+                console.log(response);
+
+                if(response.data.status==1){
+                    $.notify("Entry Added!", "success");
+                }else if(response.data.status==0){
+                    //Notification
+                    $.notify("No Entry Added!", "error");
+                }
+                
+            }).catch(function(error){
+                console.log(error);
+
+                //Notification
+                $.notify("No Entry Added!", "error");
+            });
+        }
 
 
 

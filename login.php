@@ -54,12 +54,12 @@
                     <form class="form-container">
                         <div class="form-group log-in">
                             <label for="username" class="input-name">Username</label>
-                            <input type="text" id="username" class="form-control" style="padding-left: 40px;" placeholder="Username">
+                            <input type="text" id="username" class="form-control" style="padding-left: 40px;" placeholder="Username" value="oluwaseun">
                             <i class="fa fa-user fa-fw"></i>
                         </div>
                         <div class="form-group log-in">
                             <label for="password" class="input-name">Password</label>
-                            <input type="password" id="password" class="form-control" style="padding-left: 40px;" placeholder="Password">
+                            <input type="password" id="password" class="form-control" style="padding-left: 40px;" placeholder="Password" value="oluwaseun">
                             <i class="fa fa-lock fa-fw"></i>
                         </div>
                         <input id="login" type="button" name="submit" class="btn btn-primary btn-block" style="border-radius:0!important;" value="LOGIN &#10144;">

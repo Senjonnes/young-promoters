@@ -1,8 +1,6 @@
 <?php
 // header('Content-Type: application/json');
 
-// $content ='{"email": "getEmail", "username": "getUsername", "password": "getPassword"}';
-
 //Recieve the incoming raw POST request from the Javascript end
 $content=file_get_contents("php://input");
 
